@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import './Socialdemokratiet.css';
+import soc_logo from './rose.png';
 import { VictoryPie, VictoryAnimation, VictoryLabel } from 'victory';
 import Table from './Table';
 
@@ -75,6 +77,14 @@ class Socialdemokratiet extends Component {
   render() {
     return (
       <div className="Socialdemokratiet">
+        <div className="soc-header">
+            <a className="soc-a" href="https://www.socialdemokratiet.dk/da/">
+              <img src={soc_logo} className="soc-logo" alt="Socialdemokratiet" />
+              <div className="soc-text">
+                Socialdemokratiet
+              </div>
+            </a>
+        </div>
 
         <div>
           <svg viewBox="0 0 400 400" width="300px" height="100%">
@@ -108,8 +118,8 @@ class Socialdemokratiet extends Component {
           </svg>
         </div>
 
-        <header className="header">
-          <h1 className="title">{this.state.subject}</h1>
+        <header className="App-header">
+          <h1 className="App-title">{this.state.subject}</h1>
         </header>
 
         <Table 

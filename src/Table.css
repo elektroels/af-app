@@ -1,0 +1,18 @@
+table {
+	border-spacing: 2px;
+	border-color: grey;
+  border-collapse: collapse;
+	width: 100%;
+	table-layout: fixed;
+	line-height: 2.5em;
+}
+
+table tr:nth-child(even) {
+	color: white;
+	background-color: #444;
+}
+
+table a {
+	color: black;
+}
+
