@@ -5,19 +5,19 @@ import Table from './Table';
 const data = [
   { 
     subject: "Folketingsvalg 2015",
-    text: "Af antal stemmer til folketingsvalg i 2015", 
+    text: "Af antal stemmer til Folketingsvalg i 2015", 
     number: 118003,
     source: "https://da.wikipedia.org/wiki/Folketingsvalget_2015"
   },
   { 
     subject: "Europaparlamentsvalg 2014",
-    text: "Af antal stemmer til europaparlamentsvalg i 2014", 
+    text: "Af antal stemmer til Europaparlamentsvalg i 2014", 
     number: 208067,
     source: "https://da.wikipedia.org/wiki/Europa-Parlamentsvalget_2014_i_Danmark"
   },
   { 
-    subject: "Kommunalvalg kbh 2017",
-    text: "Af antal stemmer til kommunalvalg i 2017 kbh", 
+    subject: "Kommunalvalg København 2017",
+    text: "Af antal stemmer til Kommunalvalg i 2017 København", 
     number: 16792,
     source: "https://www.tv2lorry.dk/kv2017/Koebenhavn"
   },
