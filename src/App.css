@@ -68,6 +68,26 @@ a {
 	line-height: 60px;
 }
 
+.ven-header {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	height: 60px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-top: 1px dashed black;
+	border-bottom: 1px dashed black;
+}
+
+.ven-a {
+	height: 0;
+}
+
+.ven-logo {
+	height: 60px;
+}
+
 i {
 	border: solid black;
 	border-width: 0 3px 3px 0;
