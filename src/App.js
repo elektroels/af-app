@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import soc_logo from './rose.png';
-import ven_logo from './venstre_logo.svg';
+import ven_logo from './venstre-logo.png';
 import kons_logo from './kons-logo.png';
 import df_logo from './df-logo.png';
 import la_logo from './la.png';
