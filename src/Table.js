@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import './Table.css';
 
 class Table extends Component {
-  constructor() {
-    super();
-  }
 
   calculate(number) {
     return Math.floor( (this.props.signatures/number)*100 );

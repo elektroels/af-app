@@ -2,42 +2,42 @@ import React, { Component } from 'react';
 import { VictoryPie, VictoryAnimation, VictoryLabel } from 'victory';
 import Table from './Table';
 
-const soc = [
+const data = [
   { 
     subject: "Folketingsvalg 2015",
     text: "Af antal stemmer til folketingsvalg i 2015", 
-    number: 685188,
+    number: 741746,
     source: "https://da.wikipedia.org/wiki/Folketingsvalget_2015"
   },
   { 
     subject: "Europaparlamentsvalg 2014",
     text: "Af antal stemmer til europaparlamentsvalg i 2014", 
-    number: 378772,
+    number: 605766,
     source: "https://da.wikipedia.org/wiki/Europa-Parlamentsvalget_2014_i_Danmark"
   },
   { 
     subject: "Kommunalvalg kbh 2017",
     text: "Af antal stemmer til kommunalvalg i 2017 kbh", 
-    number: 23652,
+    number: 15082,
     source: "https://www.tv2lorry.dk/kv2017/Koebenhavn"
   },
   { 
     subject: "Antal medlemmer 2016", 
     text: "Af antal medlemmer i 2016", 
-    number: 35957, 
+    number: 15911,
     source: "https://www.ft.dk/da/ofte-stillede-spoergsmaal/parti_hvor-mange-medlemmer-har-de-politiske-partier"
   },
 ];
 
-class Venstre extends Component {
+class Danskfolkeparti extends Component {
 
   constructor(props) {
     super(props);
 
     this.state = {
-      subject: soc[0].text,
-      percent: this.calculate(soc[0].number),
-      data: this.getData(this.calculate(soc[0].number))
+      subject: data[0].text,
+      percent: this.calculate(data[0].number),
+      data: this.getData(this.calculate(data[0].number))
     };
   }
   
@@ -53,10 +53,10 @@ class Venstre extends Component {
     let count = 1;
 
     this.setStateInterval = window.setInterval(() => {
-      count = (count >= soc.length) ? 0 : count;
+      count = (count >= data.length) ? 0 : count;
 
-      let percent = this.calculate(soc[count].number);
-      let text = soc[count].text;
+      let percent = this.calculate(data[count].number);
+      let text = data[count].text;
 
       this.setState({
         subject: text,
@@ -88,7 +88,7 @@ class Venstre extends Component {
               labels={() => null}
               style={{
                 data: { fill: (d) => {
-                  const color = d.y > 30 ? "#5cb94d" : "#005392";
+                  const color = d.y > 30 ? "#5cb94d" : "#1D598C";
                   return d.x === 1 ? color : "transparent";
                 }}
               }}
@@ -113,7 +113,7 @@ class Venstre extends Component {
         </header>
 
         <Table 
-          data={soc}
+          data={data}
           signatures={this.props.signatures}
         />
 
@@ -122,4 +122,4 @@ class Venstre extends Component {
   }
 }
 
-export default Venstre;
+export default Danskfolkeparti;

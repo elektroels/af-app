@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { VictoryPie, VictoryAnimation, VictoryLabel } from 'victory';
 import Table from './Table';
 
-const soc = [
+const data = [
   { 
     subject: "Folketingsvalg 2015",
     text: "Af antal stemmer til folketingsvalg i 2015", 
@@ -34,9 +34,9 @@ class Socialdemokratiet extends Component {
     super(props);
 
     this.state = {
-      subject: soc[0].text,
-      percent: this.calculate(soc[0].number),
-      data: this.getData(this.calculate(soc[0].number))
+      subject: data[0].text,
+      percent: this.calculate(data[0].number),
+      data: this.getData(this.calculate(data[0].number))
     };
   }
   
@@ -52,10 +52,10 @@ class Socialdemokratiet extends Component {
     let count = 1;
 
     this.setStateInterval = window.setInterval(() => {
-      count = (count >= soc.length) ? 0 : count;
+      count = (count >= data.length) ? 0 : count;
 
-      let percent = this.calculate(soc[count].number);
-      let text = soc[count].text;
+      let percent = this.calculate(data[count].number);
+      let text = data[count].text;
 
       this.setState({
         subject: text,
@@ -113,7 +113,7 @@ class Socialdemokratiet extends Component {
         </header>
 
         <Table 
-          data={soc}
+          data={data}
           signatures={this.props.signatures}
         />
 
