@@ -2,6 +2,7 @@
   "name": "af-app",
   "version": "0.1.0",
   "private": true,
+  "homepage" : "http://elektroels.dk/af",
   "dependencies": {
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
